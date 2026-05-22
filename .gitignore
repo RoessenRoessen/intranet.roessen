@@ -1,4 +1,6 @@
 # logs
+/storage/logs/
+/storage/cache/
 *.log
 
 # environment secrets
@@ -9,4 +11,4 @@
 Thumbs.db
 
 # vendor (als je ooit composer gebruikt)
-vendor/
+/vendor/
