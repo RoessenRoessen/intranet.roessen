@@ -1,6 +1,7 @@
-# logs
-/storage/logs/
-/storage/cache/
+# runtime data
+/storage/logs/*
+/storage/cache/*
+/storage/upload/*
 *.log
 
 # environment secrets
@@ -12,3 +13,6 @@ Thumbs.db
 
 # vendor (als je ooit composer gebruikt)
 /vendor/
+
+# keep folder structure
+!.gitkeep
