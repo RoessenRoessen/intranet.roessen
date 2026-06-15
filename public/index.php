@@ -34,6 +34,27 @@ $stmt->execute();
           <button type="submit" class="btn btn-primary">Login</button>
       </div><!-- .col -->
     </div><!-- .row -->
+
+    <div class="row mt-2">
+      <div class="col">
+
+      <?php
+
+$stmt = $pdo->query("SELECT * FROM users");
+$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+foreach ($users as $user) {
+
+        $dt = new DateTime($user['created_at'], new DateTimeZone('UTC'));
+        //$dt->setTimezone(new DateTimeZone('Europe/Amsterdam'));
+        
+  echo '<p>' . htmlspecialchars($user['voornaam']) . '</p><br/>';
+        echo $dt->format('Y-m-d H:i:s');
+}
+
+      ?>
+
+      </div>
+    </div><!-- .row -->
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
